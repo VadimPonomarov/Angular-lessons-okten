@@ -1,0 +1,22 @@
+<ul ngbNav #nav="ngbNav" class="nav-tabs d-flex justify-content-center">
+  <li [ngbNavItem]="1">
+    <a [routerLink]="['users']" ngbNavLink>Users</a>
+  </li>
+  <li [ngbNavItem]="2">
+    <a [routerLink]="['posts']" ngbNavLink>Posts</a>
+  </li>
+  <li [ngbNavItem]="3">
+    <a [routerLink]="['comments']" ngbNavLink>Comments</a>
+  </li>
+</ul>
+<div class="d-flex card align-items-center m-2">
+  <button
+    (click)="handleBackClick()"
+    type="button"
+    class="btn btn-light"
+  >
+    <i class="bi bi-arrow-left-square"></i>
+
+    Back
+  </button>
+</div>

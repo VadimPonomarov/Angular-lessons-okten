@@ -1,0 +1,9 @@
+<div class="d-flex card text-center">
+  <div>UserId: {{post.userId}}</div>
+  <div>PostId: {{post.id}}</div>
+  <div>{{post.title | uppercase}}</div>
+  <div>{{post.body | titlecase}}</div>
+  <div class="d-flex justify-content-center">
+    <button (click)="goComments()" class="btn btn-outline-primary m-2"> -> Comments -></button>
+  </div>
+</div>

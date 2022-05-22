@@ -1,0 +1,5 @@
+<div type="button" class="btn btn-outline-primary m-2 card">
+  <a [routerLink]="[comment.id]" [state]='{commentData: comment}'>
+    PostId: {{comment.postId}} - Comment: {{comment.id}} - {{comment.name | uppercase}}
+  </a>
+</div>
