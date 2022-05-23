@@ -11,6 +11,7 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./user-details.component.scss']
 })
 export class UserDetailsComponent implements OnInit {
+  title: string = 'User details';
   user: IUser;
 
 
@@ -22,6 +23,7 @@ export class UserDetailsComponent implements OnInit {
       const state = this._router.getCurrentNavigation()?.extras?.state?.['userData'] as IUser;
       if (state) {
         this.user = state;
+        this.title = ['User', this.user.id, 'details'].join(' ');
       }
     });
   }

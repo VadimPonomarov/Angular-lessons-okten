@@ -10,7 +10,7 @@ import {IPost} from "../../interfaces";
   styleUrls: ['./post-details.component.scss']
 })
 export class PostDetailsComponent implements OnInit {
-
+  title: string;
   post: IPost;
 
   constructor(private _activatedRoute: ActivatedRoute,
@@ -22,6 +22,7 @@ export class PostDetailsComponent implements OnInit {
       if (state) {
         this.post = state;
       }
+      this.title = ['Post', this.post.id, 'details'].join(' ');
     });
   }
 

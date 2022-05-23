@@ -9,6 +9,7 @@ import {IUser} from "../../interfaces";
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
+  title: string = 'Users list';
   users: IUser[];
 
   constructor(private activatedRoute: ActivatedRoute) {

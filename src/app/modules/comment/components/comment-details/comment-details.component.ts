@@ -9,6 +9,7 @@ import {IComment} from "../../interfaces";
   styleUrls: ['./comment-details.component.scss']
 })
 export class CommentDetailsComponent {
+  title: string;
   comment: IComment;
 
   constructor(private activatedRoute: ActivatedRoute, private _router: Router) {
@@ -17,6 +18,7 @@ export class CommentDetailsComponent {
       if (state) {
         this.comment = state;
       }
+      this.title = ['Comment', this.comment.id, 'for post', this.comment.postId, 'details'].join(' ');
     });
   }
 
