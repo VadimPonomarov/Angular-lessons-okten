@@ -1,0 +1,28 @@
+<form [formGroup]="form" class="border p-5" (submit)="handleSubmit()">
+  <div type="button" class="d-flex btn text-primary justify-content-end" (click)="form.reset()">Reset</div>
+  <h6>{{formTitle}}</h6>
+  <div *ngIf="form.controls['id']?.value">
+    <label class="col-sm-2 col-form-label">Id</label>
+    <input type="text" class="form-control" readonly formControlName="id">
+  </div>
+  <div>
+    <label class=" col-sm-2 col-form-label">Модель</label>
+    <input type="text" class="form-control" formControlName="model">
+  </div>
+  <div>
+    <label class=" col-sm-2 col-form-label">Цена</label>
+    <input type="text" class="form-control" formControlName="price">
+  </div>
+  <div>
+    <label class=" col-sm-2 col-form-label">Год</label>
+    <input type="text" class="form-control" formControlName="year">
+  </div>
+  <div>
+    <button type="submit" class="btn btn-primary mt-3">
+      Отправить
+    </button>
+    <button type="button" (click)="handleDelete(form.controls['id']?.value)" class="btn btn-primary mt-3">
+      Удалить
+    </button>
+  </div>
+</form>

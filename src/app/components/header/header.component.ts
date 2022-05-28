@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {Location} from "@angular/common";
 
 @Component({
   selector: 'app-header',
@@ -7,11 +6,4 @@ import {Location} from "@angular/common";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-
-  constructor(private _location: Location) {
-  }
-
-  handleBackClick() {
-    this._location.back();
-  }
 }
